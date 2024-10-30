@@ -1,7 +1,5 @@
-import { DB } from '$lib/index';
-import { json } from '@sveltejs/kit';
-import type { RequestHandler } from './$types';
-import type { Airline, AirlineResponse } from '$lib/index';
+import { json, type RequestHandler } from '@sveltejs/kit';
+import { DB, type Airline, type AirlineResponse } from '$lib/index';
 
 /**
  * Sends the list of airlines.
