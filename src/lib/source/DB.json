@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Sri Lanka Airlines",
+        "bands": []
+    },
+    {
+        "id": 2,
+        "name": "Singapore Airlines",
+        "bands": []
+    },
+    {
+        "id": 3,
+        "name": "Emirates Airlines",
+        "bands": []
+    },
+    {
+        "id": 4,
+        "name": "Qatar Airlines",
+        "bands": []
+    }
+]
