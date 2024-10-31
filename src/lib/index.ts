@@ -35,6 +35,4 @@ type Fee = {
 };
 
 // DB - Airline fees database
-export { DB };
-
-export type { Airline, AirlineResponse, Band, Country, Fee };
+export { DB, type Airline, type AirlineResponse, type Band, type Country, type Fee };
