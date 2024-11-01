@@ -11,6 +11,50 @@
                         "id": 1,
                         "name": "India",
                         "parentID": "sasc"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Pakistan",
+                        "parentID": "sasc"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Nepal",
+                        "parentID": "sasc"
+                    },{
+                        "id": 4,
+                        "name": "Bangladesh",
+                        "parentID": "sasc"
+                    },{
+                        "id": 5,
+                        "name": "Maldives",
+                        "parentID": "sasc"
+                    }
+                ],
+                "overweightFees": []
+            },{
+                "id": "me",
+                "name": "Middle East",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Bahrain",
+                        "parentID": "me"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Israel",
+                        "parentID": "me"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Jordan",
+                        "parentID": "me"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Kuwait",
+                        "parentID": "me"
                     }
                 ],
                 "overweightFees": []
