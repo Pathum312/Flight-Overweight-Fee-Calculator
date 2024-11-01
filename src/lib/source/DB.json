@@ -2,7 +2,20 @@
     {
         "id": 1,
         "name": "Sri Lanka Airlines",
-        "bands": []
+        "bands": [
+            {
+                "id": "sasc",
+                "name": "South Asian Sub-Continent",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "India",
+                        "parentID": "sasc"
+                    }
+                ],
+                "overweightFees": []
+            }
+        ]
     },
     {
         "id": 2,

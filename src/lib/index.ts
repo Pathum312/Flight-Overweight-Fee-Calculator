@@ -23,14 +23,14 @@ type Band = {
 
 // Country object
 type Country = {
-	id: string; // ID of the country
+	id: number; // ID of the country
 	name: string; // Name of the country
 	parentID: string; // ID of the parent band
 };
 
 // Fee Object
 type Fee = {
-	countryID: string; // ID of the country
+	countryID: string; // ID of the band
 	fee: number; // Charge per kg over the allocated limit (USD/KG)
 };
 
