@@ -12,13 +12,13 @@ import { findAirlineByID, findCountriesForAirline, type Airline, type Country } 
  */
 export const GET: RequestHandler = async ({ url }: RequestEvent): Promise<Response> => {
 	// Get the ID from the URL
-	const ID = url.searchParams.get('id');
+	const ID: string | null = url.searchParams.get('id');
 
 	// IF the ID is not provided, return a 400 error.
 	if (!ID) return json({ message: 'ID is required' }, { status: 400 });
 
 	// Find the corresponding airline from the database by ID.
-	const foundAirline: Airline = findAirlineByID(Number(ID));
+	const foundAirline: Airline | null = findAirlineByID(Number(ID));
 
 	// If the airline is not found, return a 404 error.
 	if (!foundAirline) return json({ message: `Airline ${ID} is not found` }, { status: 404 });

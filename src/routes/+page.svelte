@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { hello } from '$lib/index';
-
-	const names: string = hello();
+	const names: string = 'Pinkz';
 </script>
 
 <h1>Welcome to {names}</h1>

@@ -7,7 +7,9 @@ import { findAirlines, type AirlineResponse } from '$lib/index';
  * @returns {Promise<Response>} Returns airline listing
  */
 export const GET: RequestHandler = async (): Promise<Response> => {
-	const response: AirlineResponse[] = findAirlines();
+	// Find the list of airlines
+	const foundAirlines: AirlineResponse[] = findAirlines();
 
-	return json(response);
+	// Return the list of airlines
+	return json(foundAirlines);
 };

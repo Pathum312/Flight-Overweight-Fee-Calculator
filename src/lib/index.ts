@@ -1,7 +1,11 @@
 import {
 	findAirlines,
 	findAirlineByID,
+	findOriginCountryByID,
+	calculateOverweightFee,
 	findCountriesForAirline,
+	calculateBaggageOverweight,
+	findOverweightFeeForDestination,
 } from '$lib/controllers/DB.controller';
 
 // Full airline object
@@ -34,14 +38,18 @@ type Country = {
 
 // Fee Object
 type Fee = {
-	countryID: string; // ID of the band
+	bandID: string; // ID of the band
 	fee: number; // Charge per kg over the allocated limit (USD/KG)
 };
 
 export {
 	findAirlines, // Returns a list of airlines
 	findAirlineByID, // Find an airline by its ID
+	findOriginCountryByID, // Find the origin country by its ID
+	calculateOverweightFee, // Calculate the overweight fee
 	findCountriesForAirline, // Retuens a list of transit countries for an airline
+	calculateBaggageOverweight, // Calculates the baggage overweight
+	findOverweightFeeForDestination, // Returns the overweight fee for a given destination
 	type Fee,
 	type Band,
 	type Country,

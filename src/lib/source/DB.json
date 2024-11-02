@@ -21,18 +21,30 @@
                         "id": 3,
                         "name": "Nepal",
                         "parentID": "sasc"
-                    },{
+                    },
+                    {
                         "id": 4,
                         "name": "Bangladesh",
                         "parentID": "sasc"
-                    },{
+                    },
+                    {
                         "id": 5,
                         "name": "Maldives",
                         "parentID": "sasc"
                     }
                 ],
-                "overweightFees": []
-            },{
+                "overweightFees": [
+                    {
+                        "bandID": "me",
+                        "fee": 13
+                    },
+                    {
+                        "bandID": "sasc",
+                        "fee": 10
+                    }
+                ]
+            },
+            {
                 "id": "me",
                 "name": "Middle East",
                 "countries": [
@@ -57,7 +69,16 @@
                         "parentID": "me"
                     }
                 ],
-                "overweightFees": []
+                "overweightFees": [
+                    {
+                        "bandID": "me",
+                        "fee": 12
+                    },
+                    {
+                        "bandID": "sasc",
+                        "fee": 21
+                    }
+                ]
             }
         ]
     },
