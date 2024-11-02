@@ -1,4 +1,8 @@
-import DB from '$lib/source/DB.json';
+import {
+	findAirlines,
+	findAirlineByID,
+	findCountriesForAirline,
+} from '$lib/controllers/DB.controller';
 
 // Full airline object
 type Airline = {
@@ -34,5 +38,13 @@ type Fee = {
 	fee: number; // Charge per kg over the allocated limit (USD/KG)
 };
 
-// DB - Airline fees database
-export { DB, type Airline, type AirlineResponse, type Band, type Country, type Fee };
+export {
+	findAirlines, // Returns a list of airlines
+	findAirlineByID, // Find an airline by its ID
+	findCountriesForAirline, // Retuens a list of transit countries for an airline
+	type Fee,
+	type Band,
+	type Country,
+	type Airline,
+	type AirlineResponse,
+};
