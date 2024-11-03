@@ -42,6 +42,15 @@ type Fee = {
 	fee: number; // Charge per kg over the allocated limit (USD/KG)
 };
 
+// POST request
+type POSTRequest = {
+	id: number; // ID of the airline
+	from: string; // ID of the origin country
+	to: string; // ID of the destination country
+	allocatedWeight: number; // Weight allocated by the airline
+	actualWeight: number; // Actual weight of the baggage
+};
+
 export {
 	findAirlines, // Returns a list of airlines
 	findAirlineByID, // Find an airline by its ID
@@ -54,5 +63,6 @@ export {
 	type Band,
 	type Country,
 	type Airline,
+	type POSTRequest,
 	type AirlineResponse,
 };

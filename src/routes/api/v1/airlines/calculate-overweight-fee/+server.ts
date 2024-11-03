@@ -8,23 +8,26 @@ import {
 	type Fee,
 	type Band,
 	type Airline,
+	type POSTRequest,
 } from '$lib/index';
 
-	/**
-	 * Calculates the overweight fee
-	 *
-	 * @param {number} id - ID of the airline
-	 * @param {string} from - ID of the origin country
-	 * @param {string} to - ID of the destination country
-	 * @param {number} allocatedWeight - Weight allocated by the airline
-	 * @param {number} actualWeight - Actual weight of the baggage
-	 * @returns {Promise<Response>} The response containing the overweight fee.
-	 * @throws {Response} 400 - If the ID is not provided.
-	 * @throws {Response} 400 - If the origin and destination countries are not provided.
-	 * @throws {Response} 404 - If the airline is not found.
-	 * @throws {Response} 404 - If the origin country is not found.
-	 * @throws {Response} 404 - If the fee for overweight baggages to the destination country is not found.
-	 */
+/**
+ * Calculates the overweight fee for baggage based on the given request body.
+ *
+ * @param {number} id - ID of the airline
+ * @param {string} from - ID of the origin country
+ * @param {string} to - ID of the destination country
+ * @param {number} allocatedWeight - Weight allocated by the airline
+ * @param {number} actualWeight - Actual weight of the baggage
+ *
+ * @returns {Promise<Response>} The response with the calculated overweight fee
+ *
+ * @throws {Response} 400 - If the ID, origin or destination countries are not provided
+ * @throws {Response} 404 - If the airline is not found
+ * @throws {Response} 404 - If the origin country is not found
+ * @throws {Response} 404 - If the fee for overweight baggage from the origin country to the destination
+ *                         country is not found
+ */
 export const POST: RequestHandler = async ({ request }: RequestEvent): Promise<Response> => {
 	/**
 	 * @const {number} id - ID of the airline
@@ -33,14 +36,7 @@ export const POST: RequestHandler = async ({ request }: RequestEvent): Promise<R
 	 * @const {number} allocatedWeight - Weight allocated by the airline
 	 * @const {number} actualWeight - Actual weight of the baggage
 	 */
-	const {
-		id,
-		from,
-		to,
-		allocatedWeight,
-		actualWeight,
-	}: { id: number; from: string; to: string; allocatedWeight: number; actualWeight: number } =
-		await request.json();
+	const { id, from, to, allocatedWeight, actualWeight }: POSTRequest = await request.json();
 
 	// IF the ID is not provided, return a 400 error.
 	if (!id) return json({ message: 'ID is required' }, { status: 400 });
