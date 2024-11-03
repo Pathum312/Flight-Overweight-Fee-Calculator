@@ -4,8 +4,10 @@ import { findAirlineByID, findCountriesForAirline, type Airline, type Country } 
 /**
  * Retrieves the list of transit countries for a given airline by its ID.
  *
- * @param {RequestEvent} event - Get the ID from the URL of the request.
+ * @param {RequestEvent} ID - Get the ID from the URL of the request.
+ *
  * @returns {Promise<Response>} The response containing the list of transit countries.
+ *
  * @throws {Response} 400 - If the ID is not provided.
  * @throws {Response} 404 - If the airline is not found.
  * @throws {Response} 404 - If the airline is not found or has no associated transit countries.
