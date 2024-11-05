@@ -1,5 +1,5 @@
 import { json, type RequestHandler, type RequestEvent } from '@sveltejs/kit';
-import { findAirlineByID, findCountriesForAirline, type Airline, type Country } from '$lib/index';
+import { findAirlineByID, findCountriesForAirline, type Airline, type Country } from '$lib';
 
 /**
  * Retrieves the list of transit countries for a given airline by its ID.

@@ -1,7 +1,7 @@
+import { randomUUID } from 'crypto';
 import { chromium } from '@playwright/test';
 import { json, type RequestHandler } from '@sveltejs/kit';
-import { findAirlines, type AirlineResponse } from '$lib/index';
-import { randomUUID } from 'crypto';
+import { findAirlines, type AirlineResponse } from '$lib';
 
 /**
  * Sends the list of airlines.

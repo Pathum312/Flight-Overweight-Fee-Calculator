@@ -9,7 +9,7 @@ import {
 	type Band,
 	type Airline,
 	type POSTRequest,
-} from '$lib/index';
+} from '$lib';
 
 /**
  * Calculates the overweight fee for baggage based on the given request body.
