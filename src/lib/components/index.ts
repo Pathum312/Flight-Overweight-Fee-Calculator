@@ -9,8 +9,12 @@ export { default as Card } from './Card/card.svelte';
 // Form Component
 export { default as Form } from './Form/form.svelte';
 
+// Input Components
 // Text Input Component
 export { default as Text } from './Input/Text/text.svelte';
+
+// Select Input Component
+export { default as Dropdown } from './Input/Dropdown/dropdown.svelte';
 
 // Button Component
 export { default as Button } from './Button/button.svelte';

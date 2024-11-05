@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { Header, Footer, Content, Card, Form, Text, Button } from '$lib';
+	import { Header, Footer, Content, Card, Form, Text, Button, Dropdown } from '$lib';
 </script>
 
 <Header content="Baggage Overweight Calculator" alignment="center" fontSize="small" />
 <Content>
 	<Card>
 		<Form>
-			<Text label="AIRLINE" placeholder="SELECT AIRLINE" />
-			<Text label="DEPARTURE COUNTRY" placeholder="SELECT COUNTRY" />
-			<Text label="DESTINATION COUNTRY" placeholder="SELECT COUNTRY" />
+			<Dropdown label="AIRLINE" />
+			<Dropdown label="DEPARTURE COUNTRY" />
+			<Dropdown label="DESTINATION COUNTRY" />
 			<Text label="ALLOCATED WEIGHT (KG)" placeholder="ENTER WEIGHT" />
 			<Text label="ACTUAL WEIGHT (KG)" placeholder="ENTER WEIGHT" />
 			<Button />
