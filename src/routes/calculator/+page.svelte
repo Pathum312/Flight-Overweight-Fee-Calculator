@@ -9,9 +9,10 @@
 			<Text label="AIRLINE" placeholder="SELECT AIRLINE" />
 			<Text label="DEPARTURE COUNTRY" placeholder="SELECT COUNTRY" />
 			<Text label="DESTINATION COUNTRY" placeholder="SELECT COUNTRY" />
-			<Text label="ALLOCATED WEIGHT" placeholder="ENTER WEIGHT" />
-			<Text label="ACTUAL WEIGHT" placeholder="ENTER WEIGHT" />
+			<Text label="ALLOCATED WEIGHT (KG)" placeholder="ENTER WEIGHT" />
+			<Text label="ACTUAL WEIGHT (KG)" placeholder="ENTER WEIGHT" />
 			<Button />
+			<Text label="BAGGAGE OVERWEIGHT FEE (USD)" placeholder="$0" />
 		</Form>
 	</Card>
 </Content>

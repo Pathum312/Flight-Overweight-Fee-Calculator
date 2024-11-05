@@ -13,7 +13,7 @@
 		--button_outline_color: black;
 		border: none;
 		cursor: pointer;
-		margin: 1rem 0 0 0;
+		margin: 1rem 0 1rem 0;
 		font-size: var(--fs-0);
 		border-radius: var(--button_radius);
 		background: var(--button_outline_color);
