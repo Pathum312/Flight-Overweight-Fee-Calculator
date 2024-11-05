@@ -6,9 +6,9 @@
 <Content>
 	<Card>
 		<Form>
-			<Dropdown label="AIRLINE" />
-			<Dropdown label="DEPARTURE COUNTRY" />
-			<Dropdown label="DESTINATION COUNTRY" />
+			<Dropdown label="AIRLINE" placeholder="SELECT AIRLINE" />
+			<Dropdown label="DEPARTURE COUNTRY" placeholder="SELECT COUNTRY" />
+			<Dropdown label="DESTINATION COUNTRY" placeholder="SELECT COUNTRY" />
 			<Text label="ALLOCATED WEIGHT (KG)" placeholder="ENTER WEIGHT" />
 			<Text label="ACTUAL WEIGHT (KG)" placeholder="ENTER WEIGHT" />
 			<Button />
