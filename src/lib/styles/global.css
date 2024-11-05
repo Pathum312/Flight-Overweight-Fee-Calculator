@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+:root {
+	/* Default font family for all components */
+	--font-default: 'Jockey One', sans-serif;
+
+	/* Font Size for Headings */
+	--fs-heading--2: clamp(1.2847rem, 1.1752rem + 0.5477vi, 1.6rem);
+	--fs-heading--1: clamp(1.5417rem, 1.3824rem + 0.7962vi, 2rem);
+	--fs-heading-0: clamp(1.85rem, 1.6242rem + 1.1292vi, 2.5rem);
+	--fs-heading-1: clamp(2.22rem, 1.9056rem + 1.5722vi, 3.125rem);
+	--fs-heading-2: clamp(2.664rem, 2.2324rem + 2.1581vi, 3.9063rem);
+	--fs-heading-3: clamp(3.1968rem, 2.611rem + 2.929vi, 4.8828rem);
+	--fs-heading-4: clamp(3.8362rem, 3.0484rem + 3.9389vi, 6.1035rem);
+	--fs-heading-5: clamp(4.6034rem, 3.552rem + 5.2569vi, 7.6294rem);
+
+	/* Font Size for Text */
+	--fs--2: clamp(0.5903rem, 0.573rem + 0.0864vi, 0.64rem);
+	--fs--1: clamp(0.7083rem, 0.6765rem + 0.1592vi, 0.8rem);
+	--fs-0: clamp(0.85rem, 0.7979rem + 0.2606vi, 1rem);
+	--fs-1: clamp(1.02rem, 0.9401rem + 0.3996vi, 1.25rem);
+	--fs-2: clamp(1.224rem, 1.1064rem + 0.5881vi, 1.5625rem);
+	--fs-3: clamp(1.4688rem, 1.3005rem + 0.8414vi, 1.9531rem);
+	--fs-4: clamp(1.7626rem, 1.5267rem + 1.1793vi, 2.4414rem);
+	--fs-5: clamp(2.1151rem, 1.7896rem + 1.6273vi, 3.0518rem);
+
+	/* Background Colors */
+	--clr-black: #212121;
+	--clr-white: #ffffff;
+	--clr-white-50: #e8e8e8;
+	--clr-white-100: #d9d9d9;
+
+	/* Theme Color */
+	--clr-soft-blue: #4a90e2;
+	--clr-dark-blue: #19569d;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-default);
+}
