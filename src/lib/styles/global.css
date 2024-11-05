@@ -28,9 +28,10 @@
 	--clr-black: #212121;
 	--clr-white: #ffffff;
 	--clr-white-50: #e8e8e8;
-	--clr-white-100: #d9d9d9;
+	--clr-white-100: #f1f1f1;
 
 	/* Theme Color */
+	--clr-pale-red: #ffb4b8;
 	--clr-soft-blue: #4a90e2;
 	--clr-dark-blue: #19569d;
 }

@@ -9,6 +9,6 @@
 		align-items: center;
 		border-radius: 0.25rem;
 		justify-content: center;
-		background-color: var(--clr-white-50);
+		background-color: transparent;
 	}
 </style>
