@@ -30,7 +30,7 @@
 		position: relative;
 		padding: 0.9375rem;
 		font-size: var(--fs-0);
-		background-color: white;
+		background-color: var(--clr-white-100);
 		border: 0.25rem solid black;
 		box-shadow:
 			0.3125rem 0.3125rem 0 black,

@@ -9,7 +9,7 @@
 <style>
 	button {
 		--button_radius: 0.75em;
-		--button_color: white;
+		--button_color: var(--clr-white-100);
 		--button_outline_color: black;
 		border: none;
 		cursor: pointer;
