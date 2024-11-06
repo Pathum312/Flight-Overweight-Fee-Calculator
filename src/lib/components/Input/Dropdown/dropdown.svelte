@@ -1,13 +1,25 @@
 <script lang="ts">
-	let { label = 'EXAMPLE', placeholder = 'SELECT OPTION' } = $props();
+	import { type AirlineResponse, type Country } from '$lib';
+
+	let {
+		label = 'EXAMPLE',
+		placeholder = 'SELECT OPTION',
+		data,
+		selectedValue = $bindable(),
+	}: {
+		label: string;
+		placeholder: string;
+		data: AirlineResponse[];
+		selectedValue?: AirlineResponse | Country | undefined;
+	} = $props();
 </script>
 
 <div class="container">
-	<select class="text-select smooth-type" id="input">
+	<select class="text-select smooth-type" id="input" bind:value={selectedValue}>
 		<option disabled selected>{placeholder}</option>
-		<option value="option1">OPTION 1</option>
-		<option value="option2">OPTION 2</option>
-		<option value="option3">OPTION 3</option>
+		{#each data as option}
+			<option value={option}>{option.name.toUpperCase()}</option>
+		{/each}
 	</select>
 	<label class="input-label" for="input">{label}</label>
 </div>
