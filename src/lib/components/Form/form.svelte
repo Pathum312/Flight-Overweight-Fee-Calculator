@@ -1,80 +1,83 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { preventDefault } from 'svelte/legacy';
 	import { Text, Button, Dropdown, type AirlineResponse, type Country } from '$lib';
 
-	const getAirlines = async (): Promise<AirlineResponse[]> => {
+	let countries: Country[] = $state([]); // The list of countries
+	let airlines: AirlineResponse[] = $state([]); // The list of airlines
+	let actualWeight: number | undefined = $state(); // The actual weight of baggage
+	let overweightFee: string | undefined = $state(); // The overweight fee for the baggage
+	let allocatedWeight: number | undefined = $state(); // The allocated weight of baggage
+	let selectedAirline: AirlineResponse | undefined = $state(); // The selected airline
+	let selecetdDepartureCountry: Country | undefined = $state(); // The selected departure country
+	let selecetdDestinationCountry: Country | undefined = $state(); // The selected destination country
+
+	const getAirlines = async () => {
 		// Send a GET request to the /api/v1/airlines endpoint
 		const response = await fetch('/api/v1/airlines');
 
 		// Parse the response as JSON
-		const airlines: AirlineResponse[] = await response.json();
-
-		// Return the list of airlines
-		return airlines;
+		airlines = await response.json();
 	};
 
-	const getCountries = async (): Promise<Country[]> => {
+	const getCountries = async () => {
 		// Send a GET request to the /api/v1/airlines/get-countries endpoint
 		const response = await fetch(`/api/v1/airlines/get-countries?id=${selectedAirline?.id}`);
 
-		// Parse the response as JSON
-		const countries: Country[] = await response.json();
-
-		// Return the list of countries
-		return countries;
+		// Parse the response as JSON and assign it to the countries variable
+		countries = await response.json();
 	};
 
-	// Get the list of airlines
-	let airlines: AirlineResponse[] = $state([]);
+	const calculateOverweightFee = async () => {
+		// Send a POST request to the /api/v1/airlines/calculate-overweight-fee endpoint
+		const response = await fetch('api/v1/airlines/calculate-overweight-fee', {
+			method: 'POST',
+			body: JSON.stringify({
+				id: selectedAirline?.id,
+				from: selecetdDepartureCountry?.parentID,
+				to: selecetdDestinationCountry?.parentID,
+				allocatedWeight,
+				actualWeight,
+			}),
+			headers: {
+				'content-type': 'application/json',
+			},
+		});
 
-	// Get the list of countries
-	let countries: Country[] = $state([]);
+		// Parse the response as JSON
+		const data = await response.json();
 
-	// Get the selected airline
-	let selectedAirline: AirlineResponse | undefined = $state();
+		// Assign the overweight fee to the overweightFee variable
+		overweightFee = `$${data.overweightFee}`;
+	};
 
-	// Get the selected departure country
-	let selecetdDepartureCountry: Country | undefined = $state();
-
-	// Get the selected destination country
-	let selecetdDestinationCountry: Country | undefined = $state();
-
-	onMount(async () => {
-		// Get the list of airlines before the component is mounted
-		airlines = await getAirlines();
-	});
-
-	$effect(() => {
-		// Get the list of countries when the selected airline changes or when a airline is selected
-		if (selectedAirline) {
-			getCountries().then((data: Country[]) => (countries = data));
-		}
-	});
+	onMount(getAirlines);
 </script>
 
-<form action="/calculator">
+<form onsubmit={preventDefault(calculateOverweightFee)}>
 	<Dropdown
 		label="AIRLINE"
 		placeholder="SELECT AIRLINE"
-		data={airlines}
+		options={airlines}
+		onchange={getCountries}
 		bind:selectedValue={selectedAirline}
 	/>
 	<Dropdown
 		label="DEPARTURE COUNTRY"
 		placeholder="SELECT COUNTRY"
-		data={countries}
+		options={countries}
 		bind:selectedValue={selecetdDepartureCountry}
 	/>
 	<Dropdown
 		label="DESTINATION COUNTRY"
 		placeholder="SELECT COUNTRY"
-		data={countries}
+		options={countries}
 		bind:selectedValue={selecetdDestinationCountry}
 	/>
-	<Text label="ALLOCATED WEIGHT (KG)" placeholder="ENTER WEIGHT" />
-	<Text label="ACTUAL WEIGHT (KG)" placeholder="ENTER WEIGHT" />
+	<Text label="ALLOCATED WEIGHT (KG)" placeholder="ENTER WEIGHT" bind:weight={allocatedWeight} />
+	<Text label="ACTUAL WEIGHT (KG)" placeholder="ENTER WEIGHT" bind:weight={actualWeight} />
 	<Button />
-	<Text label="BAGGAGE OVERWEIGHT FEE (USD)" placeholder="$0" />
+	<Text label="BAGGAGE OVERWEIGHT FEE (USD)" placeholder="$0" bind:weight={overweightFee} />
 </form>
 
 <style>

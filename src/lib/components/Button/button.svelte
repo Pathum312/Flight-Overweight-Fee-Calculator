@@ -1,8 +1,12 @@
 <script lang="ts">
-	let { label = 'CALCULATE' } = $props();
+	type Props = {
+		label?: string;
+	};
+
+	let { label = 'CALCULATE' }: Props = $props();
 </script>
 
-<button>
+<button type="submit">
 	<span class="button_top">{label}</span>
 </button>
 
@@ -21,7 +25,7 @@
 
 	.button_top {
 		display: block;
-        font-weight: bold;
+		font-weight: bold;
 		padding: 0.75em 1.5em;
 		box-sizing: border-box;
 		transform: translateY(-0.2em);

@@ -1,23 +1,27 @@
 <script lang="ts">
 	import { type AirlineResponse, type Country } from '$lib';
 
+	type Props = {
+		label: string; // The label of the dropdown
+		placeholder: string; // The placeholder of the dropdown
+		onchange?: () => void; // The function to be called when the dropdown value changes
+		options: AirlineResponse[]; // The options of the dropdown
+		selectedValue?: AirlineResponse | Country | undefined; // The selected value of the dropdown
+	};
+
 	let {
+		options,
+		onchange,
 		label = 'EXAMPLE',
-		placeholder = 'SELECT OPTION',
-		data,
 		selectedValue = $bindable(),
-	}: {
-		label: string;
-		placeholder: string;
-		data: AirlineResponse[];
-		selectedValue?: AirlineResponse | Country | undefined;
-	} = $props();
+		placeholder = 'SELECT OPTION',
+	}: Props = $props();
 </script>
 
 <div class="container">
-	<select class="text-select smooth-type" id="input" bind:value={selectedValue}>
+	<select class="text-select smooth-type" id="input" bind:value={selectedValue} onchange={onchange}>
 		<option disabled selected>{placeholder}</option>
-		{#each data as option}
+		{#each options as option}
 			<option value={option}>{option.name.toUpperCase()}</option>
 		{/each}
 	</select>

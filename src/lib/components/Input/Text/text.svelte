@@ -1,9 +1,15 @@
 <script lang="ts">
-	let { label = 'EXAMPLE', placeholder = 'TYPE HERE' } = $props();
+	type Props = {
+		label: string;
+		placeholder: string;
+		weight?: number | string | undefined;
+	};
+
+	let { label = 'EXAMPLE', placeholder = 'TYPE HERE', weight = $bindable() }: Props = $props();
 </script>
 
 <div class="container">
-	<input {placeholder} class="text-input smooth-type" type="text" id="input" />
+	<input {placeholder} class="text-input smooth-type" type="text" id="input" bind:value={weight} />
 	<label class="input-label" for="input">{label}</label>
 </div>
 
