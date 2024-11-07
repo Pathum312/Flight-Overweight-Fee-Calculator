@@ -18,3 +18,6 @@ export { default as Dropdown } from './Input/Dropdown/dropdown.svelte';
 
 // Button Component
 export { default as Button } from './Button/button.svelte';
+
+// Message Component
+export { default as Message } from './Message/message.svelte';

@@ -7,7 +7,7 @@ import {
 	calculateBaggageOverweight,
 	findOverweightFeeForDestination,
 } from '$lib/controllers/DB.controller';
-import { Header, Footer, Content, Card, Form, Text, Button, Dropdown } from './components';
+import { Header, Footer, Content, Card, Form, Text, Button, Dropdown, Message } from './components';
 
 // Full airline object
 type Airline = {
@@ -73,5 +73,6 @@ export {
 	Footer, // Footer UI Component
 	Button, // Button UI Component
 	Content, // Content UI Component
+	Message, // Message UI Component
 	Dropdown, // Dropdown Input UI Component
 };
