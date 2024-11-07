@@ -6,7 +6,7 @@
 		placeholder: string; // The placeholder of the dropdown
 		onchange?: () => void; // The function to be called when the dropdown value changes
 		options: AirlineResponse[]; // The options of the dropdown
-		selectedValue?: AirlineResponse | Country | undefined; // The selected value of the dropdown
+		selectedValue?: AirlineResponse | Country; // The selected value of the dropdown
 	};
 
 	let {
@@ -19,7 +19,7 @@
 </script>
 
 <div class="container">
-	<select class="text-select smooth-type" id="input" bind:value={selectedValue} onchange={onchange}>
+	<select class="text-select smooth-type" id="input" bind:value={selectedValue} {onchange}>
 		<option disabled selected>{placeholder}</option>
 		{#each options as option}
 			<option value={option}>{option.name.toUpperCase()}</option>

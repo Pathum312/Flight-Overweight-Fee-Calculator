@@ -29,6 +29,8 @@
 	};
 
 	const calculateOverweightFee = async () => {
+		if (typeof selectedAirline === 'string') alert('Please select an airline');
+
 		// Send a POST request to the /api/v1/airlines/calculate-overweight-fee endpoint
 		const response = await fetch('api/v1/airlines/calculate-overweight-fee', {
 			method: 'POST',
