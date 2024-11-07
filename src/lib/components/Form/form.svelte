@@ -28,8 +28,25 @@
 		countries = await response.json();
 	};
 
+	// Validate selection
+	const validateSelection = (value: any, message: string) => {
+		if (typeof value === 'string') {
+			alert(message);
+			return false;
+		}
+		return true;
+	};
+
 	const calculateOverweightFee = async () => {
-		if (typeof selectedAirline === 'string') alert('Please select an airline');
+		// Check if an airline is selected
+		if (!validateSelection(selectedAirline, 'Please select an airline')) return;
+
+		// Check if departure country is selected
+		if (!validateSelection(selecetdDepartureCountry, 'Please select a departure country')) return;
+
+		// Check if destination country is selected
+		if (!validateSelection(selecetdDestinationCountry, 'Please select a destination country'))
+			return;
 
 		// Send a POST request to the /api/v1/airlines/calculate-overweight-fee endpoint
 		const response = await fetch('api/v1/airlines/calculate-overweight-fee', {
