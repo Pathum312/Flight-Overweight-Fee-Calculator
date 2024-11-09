@@ -27,7 +27,10 @@ const findAirlineByID = (ID: number): Airline => {
  * @returns {Country[]} The list of countries
  */
 const findCountriesForAirline = (airline: Airline): Country[] => {
-	return airline.bands.map((band: Band) => band.countries).flat();
+	return airline.bands
+		.map((band: Band) => band.countries)
+		.flat()
+		.sort((a: Country, b: Country) => a.name.localeCompare(b.name)); // Sort by country name alphabetically
 };
 
 /**

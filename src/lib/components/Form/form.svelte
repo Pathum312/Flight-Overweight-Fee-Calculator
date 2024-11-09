@@ -61,6 +61,7 @@
 	 * @returns {boolean} - True if the value is a number, false otherwise
 	 */
 	const validateWeight = (weight: any, text: string): boolean => {
+		console.log(typeof weight);
 		if (typeof weight !== 'number') {
 			showMessage = true; // Show the error message
 			message = text; // Set the error message

@@ -67,16 +67,70 @@
                         "id": 4,
                         "name": "Kuwait",
                         "parentID": "me"
+                    },
+                    {
+                        "id": 5,
+                        "name": "Lebanon",
+                        "parentID": "me"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Oman",
+                        "parentID": "me"
+                    },
+                    {
+                        "id": 7,
+                        "name": "Qatar",
+                        "parentID": "me"
+                    },
+                    {
+                        "id": 8,
+                        "name": "Saudi Arabia",
+                        "parentID": "me"
+                    },
+                    {
+                        "id": 9,
+                        "name": "Sudan",
+                        "parentID": "me"
+                    },
+                    {
+                        "id": 10,
+                        "name": "United Arab Emirates",
+                        "parentID": "me"
                     }
                 ],
                 "overweightFees": [
                     {
-                        "bandID": "me",
-                        "fee": 12
+                        "bandID": "jp",
+                        "fee": 38
+                    },
+                    {
+                        "bandID": "kp",
+                        "fee": 38
                     },
                     {
                         "bandID": "sasc",
-                        "fee": 21
+                        "fee": 13
+                    },
+                    {
+                        "bandID": "lk",
+                        "fee": 13
+                    },
+                    {
+                        "bandID": "eu",
+                        "fee": 25
+                    },
+                    {
+                        "bandID": "za",
+                        "fee": 38
+                    },
+                    {
+                        "bandID": "sea",
+                        "fee": 25
+                    },
+                    {
+                        "bandID": "swp",
+                        "fee": 56
                     }
                 ]
             }
