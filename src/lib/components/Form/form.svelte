@@ -49,6 +49,7 @@
 			message = text; // Set the error message
 			return false;
 		}
+		showMessage = false; // Hide the error message
 		return true;
 	};
 
@@ -61,11 +62,13 @@
 	 * @returns {boolean} - True if the value is a number, false otherwise
 	 */
 	const validateWeight = (weight: any, text: string): boolean => {
-		console.log(typeof weight);
-		if (typeof weight !== 'number') {
+		if (typeof weight === 'undefined' || weight === '') {
 			showMessage = true; // Show the error message
 			message = text; // Set the error message
+			overweightFee = undefined; // Set the overweight fee to undefined again
+			return false;
 		}
+		showMessage = false; // Hide the error message
 		return true;
 	};
 
