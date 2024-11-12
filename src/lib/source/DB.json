@@ -4,6 +4,55 @@
         "name": "Sri Lanka Airlines",
         "bands": [
             {
+                "id": "lk",
+                "name": "Sri Lanka",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Sri Lanka",
+                        "parentID": "lk"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "jp",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "kp",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "sasc",
+                        "fee": 10
+                    },
+                    {
+                        "bandID": "lk",
+                        "fee": 10
+                    },
+                    {
+                        "bandID": "eu",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "za",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "sea",
+                        "fee": 19
+                    },
+                    {
+                        "bandID": "swp",
+                        "fee": 38
+                    },
+                    {
+                        "bandID": "me",
+                        "fee": 13
+                    }
+                ]
+            },
+            {
                 "id": "sasc",
                 "name": "South Asian Sub-Continent",
                 "countries": [
@@ -35,12 +84,380 @@
                 ],
                 "overweightFees": [
                     {
-                        "bandID": "me",
-                        "fee": 13
+                        "bandID": "jp",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "kp",
+                        "fee": 31
                     },
                     {
                         "bandID": "sasc",
                         "fee": 10
+                    },
+                    {
+                        "bandID": "lk",
+                        "fee": 10
+                    },
+                    {
+                        "bandID": "eu",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "za",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "sea",
+                        "fee": 19
+                    },
+                    {
+                        "bandID": "swp",
+                        "fee": 38
+                    },
+                    {
+                        "bandID": "me",
+                        "fee": 13
+                    }
+                ]
+            },
+            {
+                "id": "sea",
+                "name": "South East Asia",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Cambodia",
+                        "parentID": "sea"
+                    },
+                    {
+                        "id": 2,
+                        "name": "China",
+                        "parentID": "sea"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Hong Kong - China SAR",
+                        "parentID": "sea"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Indonesia",
+                        "parentID": "sea"
+                    },
+                    {
+                        "id": 5,
+                        "name": "Kazakhstan",
+                        "parentID": "sea"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Malaysia",
+                        "parentID": "sea"
+                    },
+                    {
+                        "id": 7,
+                        "name": "Philippines",
+                        "parentID": "sea"
+                    },
+                    {
+                        "id": 8,
+                        "name": "Singapore",
+                        "parentID": "sea"
+                    },
+                    {
+                        "id": 9,
+                        "name": "Taiwan",
+                        "parentID": "sea"
+                    },
+                    {
+                        "id": 10,
+                        "name": "Thailand",
+                        "parentID": "sea"
+                    },
+                    {
+                        "id": 11,
+                        "name": "Vietnam",
+                        "parentID": "sea"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "jp",
+                        "fee": 19
+                    },
+                    {
+                        "bandID": "kp",
+                        "fee": 19
+                    },
+                    {
+                        "bandID": "sasc",
+                        "fee": 19
+                    },
+                    {
+                        "bandID": "lk",
+                        "fee": 19
+                    },
+                    {
+                        "bandID": "eu",
+                        "fee": 38
+                    },
+                    {
+                        "bandID": "za",
+                        "fee": 38
+                    },
+                    {
+                        "bandID": "sea",
+                        "fee": 13
+                    },
+                    {
+                        "bandID": "swp",
+                        "fee": 25
+                    },
+                    {
+                        "bandID": "me",
+                        "fee": 19
+                    }
+                ]
+            },
+            {
+                "id": "kp",
+                "name": "Korea",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Korea",
+                        "parentID": "kp"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "sasc",
+                        "fee": 25
+                    },
+                    {
+                        "bandID": "lk",
+                        "fee": 25
+                    },
+                    {
+                        "bandID": "eu",
+                        "fee": 44
+                    },
+                    {
+                        "bandID": "za",
+                        "fee": 44
+                    },
+                    {
+                        "bandID": "sea",
+                        "fee": 19
+                    },
+                    {
+                        "bandID": "swp",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "me",
+                        "fee": 25
+                    }
+                ]
+            },
+            {
+                "id": "eu",
+                "name": "Europe",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Austria",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Belgium",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Bulgaria",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Cyprus",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 5,
+                        "name": "Czech Republic",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Denmark",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 7,
+                        "name": "Estonia",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 8,
+                        "name": "Finland",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 9,
+                        "name": "France",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 10,
+                        "name": "Germany",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 11,
+                        "name": "Greece",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 12,
+                        "name": "Hungary",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 13,
+                        "name": "Ireland",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 14,
+                        "name": "Italy",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 15,
+                        "name": "Latvia",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 16,
+                        "name": "Lithuania",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 17,
+                        "name": "Luxembourg",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 18,
+                        "name": "Netherlands",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 19,
+                        "name": "Norway",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 20,
+                        "name": "Poland",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 21,
+                        "name": "Portugal",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 22,
+                        "name": "Romania",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 23,
+                        "name": "Russia",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 24,
+                        "name": "Slovenia",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 25,
+                        "name": "Spain",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 26,
+                        "name": "Sweden",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 27,
+                        "name": "Switzerland",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 28,
+                        "name": "Turkey",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 29,
+                        "name": "United Kingdom",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 30,
+                        "name": "Serbia",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 31,
+                        "name": "Montenegro",
+                        "parentID": "eu"
+                    },
+                    {
+                        "id": 32,
+                        "name": "Croatia",
+                        "parentID": "eu"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "jp",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "kp",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "sasc",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "lk",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "za",
+                        "fee": 44
+                    },
+                    {
+                        "bandID": "sea",
+                        "fee": 38
+                    },
+                    {
+                        "bandID": "swp",
+                        "fee": 44
+                    },
+                    {
+                        "bandID": "me",
+                        "fee": 25
                     }
                 ]
             },
@@ -131,6 +548,151 @@
                     {
                         "bandID": "swp",
                         "fee": 56
+                    }
+                ]
+            },
+            {
+                "id": "za",
+                "name": "Africa",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "South Africa",
+                        "parentID": "za"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Seychelles",
+                        "parentID": "za"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "jp",
+                        "fee": 50
+                    },
+                    {
+                        "bandID": "kp",
+                        "fee": 50
+                    },
+                    {
+                        "bandID": "sasc",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "lk",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "eu",
+                        "fee": 44
+                    },
+                    {
+                        "bandID": "sea",
+                        "fee": 38
+                    },
+                    {
+                        "bandID": "swp",
+                        "fee": 56
+                    },
+                    {
+                        "bandID": "me",
+                        "fee": 31
+                    }
+                ]
+            },
+            {
+                "id": "swp",
+                "name": "South West Pacific",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Australia",
+                        "parentID": "swp"
+                    },
+                    {
+                        "id": 2,
+                        "name": "New Zealand",
+                        "parentID": "swp"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "jp",
+                        "fee": 38
+                    },
+                    {
+                        "bandID": "kp",
+                        "fee": 38
+                    },
+                    {
+                        "bandID": "sasc",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "lk",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "eu",
+                        "fee": 50
+                    },
+                    {
+                        "bandID": "za",
+                        "fee": 50
+                    },
+                    {
+                        "bandID": "sea",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "swp",
+                        "fee": 56
+                    },
+                    {
+                        "bandID": "me",
+                        "fee": 38
+                    }
+                ]
+            },
+            {
+                "id": "jp",
+                "name": "Japan",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Japan",
+                        "parentID": "jp"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "sasc",
+                        "fee": 25
+                    },
+                    {
+                        "bandID": "lk",
+                        "fee": 25
+                    },
+                    {
+                        "bandID": "eu",
+                        "fee": 44
+                    },
+                    {
+                        "bandID": "za",
+                        "fee": 44
+                    },
+                    {
+                        "bandID": "sea",
+                        "fee": 19
+                    },
+                    {
+                        "bandID": "swp",
+                        "fee": 31
+                    },
+                    {
+                        "bandID": "me",
+                        "fee": 25
                     }
                 ]
             }
