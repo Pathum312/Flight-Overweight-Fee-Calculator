@@ -701,16 +701,465 @@
     {
         "id": 2,
         "name": "Singapore Airlines",
-        "bands": []
-    },
-    {
-        "id": 3,
-        "name": "Emirates Airlines",
-        "bands": []
-    },
-    {
-        "id": 4,
-        "name": "Qatar Airlines",
-        "bands": []
+        "bands": [
+            {
+                "id": "sg",
+                "name": "Singapore",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Singapore",
+                        "parentID": "sg"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "band1",
+                        "fee": 8
+                    },
+                    {
+                        "bandID": "band2",
+                        "fee": 15
+                    },
+                    {
+                        "bandID": "band3",
+                        "fee": 22
+                    },
+                    {
+                        "bandID": "band4",
+                        "fee": 28
+                    },
+                    {
+                        "bandID": "band5",
+                        "fee": 6
+                    }
+                ]
+            },
+            {
+                "id": "band1",
+                "name": "Band 1",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Brunei",
+                        "parentID": "band1"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Cambodia",
+                        "parentID": "band1"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Indonesia",
+                        "parentID": "band1"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Laos",
+                        "parentID": "band1"
+                    },
+                    {
+                        "id": 5,
+                        "name": "Malaysia",
+                        "parentID": "band1"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Myanmar",
+                        "parentID": "band1"
+                    },
+                    {
+                        "id": 7,
+                        "name": "Philippines",
+                        "parentID": "band1"
+                    },
+                    {
+                        "id": 8,
+                        "name": "Thailand",
+                        "parentID": "band1"
+                    },
+                    {
+                        "id": 9,
+                        "name": "Vietnam",
+                        "parentID": "band1"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "sg",
+                        "fee": 8
+                    },
+                    {
+                        "bandID": "band1",
+                        "fee": 16
+                    },
+                    {
+                        "bandID": "band2",
+                        "fee": 23
+                    },
+                    {
+                        "bandID": "band3",
+                        "fee": 30
+                    },
+                    {
+                        "bandID": "band4",
+                        "fee": 36
+                    },
+                    {
+                        "bandID": "band5",
+                        "fee": 6
+                    }
+                ]
+            },
+            {
+                "id": "band2",
+                "name": "Band 2",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "China",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Hong Kong SAR- China",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Macau",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Taiwan",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 5,
+                        "name": "Mongolia",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Afghanistan",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 7,
+                        "name": "Bangladesh",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 8,
+                        "name": "India",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 9,
+                        "name": "Maldives",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 10,
+                        "name": "Nepal",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 11,
+                        "name": "Pakistan",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 12,
+                        "name": "Sri Lanka",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 13,
+                        "name": "Kazakhstan",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 14,
+                        "name": "Kyrgyzstan",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 15,
+                        "name": "Turkmenistan",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 16,
+                        "name": "Uzbekistan",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 17,
+                        "name": "Tajikistan",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 18,
+                        "name": "Russia in Asia",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 19,
+                        "name": "Japan",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 20,
+                        "name": "Korea",
+                        "parentID": "band2"
+                    },
+                    {
+                        "id": 21,
+                        "name": "Middle East",
+                        "parentID": "band2"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "sg",
+                        "fee": 15
+                    },
+                    {
+                        "bandID": "band1",
+                        "fee": 23
+                    },
+                    {
+                        "bandID": "band2",
+                        "fee": 30
+                    },
+                    {
+                        "bandID": "band3",
+                        "fee": 37
+                    },
+                    {
+                        "bandID": "band4",
+                        "fee": 43
+                    },
+                    {
+                        "bandID": "band5",
+                        "fee": 6
+                    }
+                ]
+            },
+            {
+                "id": "band3",
+                "name": "Band 3",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Australia",
+                        "parentID": "band3"
+                    },
+                    {
+                        "id": 2,
+                        "name": "New Zealand",
+                        "parentID": "band3"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Guam",
+                        "parentID": "band3"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Marshall Islands",
+                        "parentID": "band3"
+                    },
+                    {
+                        "id": 5,
+                        "name": "Micronesia",
+                        "parentID": "band3"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Northern Mariana Islands",
+                        "parentID": "band3"
+                    },
+                    {
+                        "id": 7,
+                        "name": "Palau",
+                        "parentID": "band3"
+                    },
+                    {
+                        "id": 8,
+                        "name": "Timor Leste",
+                        "parentID": "band3"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "sg",
+                        "fee": 22
+                    },
+                    {
+                        "bandID": "band1",
+                        "fee": 30
+                    },
+                    {
+                        "bandID": "band2",
+                        "fee": 37
+                    },
+                    {
+                        "bandID": "band3",
+                        "fee": 44
+                    },
+                    {
+                        "bandID": "band4",
+                        "fee": 50
+                    },
+                    {
+                        "bandID": "band5",
+                        "fee": 6
+                    }
+                ]
+            },
+            {
+                "id": "band4",
+                "name": "Band 4",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Africa",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Belgium",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Denmark",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 4,
+                        "name": "France",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 5,
+                        "name": "Germany",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Italy",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 7,
+                        "name": "Netherlands",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 8,
+                        "name": "Spain",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 9,
+                        "name": "Sweden",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 10,
+                        "name": "Switzerland",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 11,
+                        "name": "Turkey",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 12,
+                        "name": "United Kingdom",
+                        "parentID": "band4"
+                    },
+                    {
+                        "id": 13,
+                        "name": "Russia in Europe",
+                        "parentID": "band4"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "sg",
+                        "fee": 28
+                    },
+                    {
+                        "bandID": "band1",
+                        "fee": 36
+                    },
+                    {
+                        "bandID": "band2",
+                        "fee": 43
+                    },
+                    {
+                        "bandID": "band3",
+                        "fee": 50
+                    },
+                    {
+                        "bandID": "band4",
+                        "fee": 56
+                    },
+                    {
+                        "bandID": "band5",
+                        "fee": 6
+                    }
+                ]
+            },
+            {
+                "id": "band5",
+                "name": "Band 5",
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Copenhagen - Rome",
+                        "parentID": "band5"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Barcelona - Milan",
+                        "parentID": "band5"
+                    }
+                ],
+                "overweightFees": [
+                    {
+                        "bandID": "sg",
+                        "fee": 6
+                    },
+                    {
+                        "bandID": "band1",
+                        "fee": 6
+                    },
+                    {
+                        "bandID": "band2",
+                        "fee": 6
+                    },
+                    {
+                        "bandID": "band3",
+                        "fee": 6
+                    },
+                    {
+                        "bandID": "band4",
+                        "fee": 6
+                    },
+                    {
+                        "bandID": "band5",
+                        "fee": 6
+                    }
+                ]
+            }
+        ]
     }
 ]
