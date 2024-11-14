@@ -2,6 +2,7 @@
 	import { Header, Footer, Content, Card, Form } from '$lib';
 </script>
 
+<title>Pinkz | Calculator</title>
 <Header content="Baggage Overweight Calculator" alignment="center" fontSize="small" />
 <Content>
 	<Card>
