@@ -17,8 +17,8 @@
 	 * Gets the list of airlines and assigns it to the airlines variable
 	 */
 	const getAirlines = async () => {
-		// Send a GET request to the /api/v1/airlines endpoint
-		const response = await fetch('/api/v1/airlines');
+		// Send a GET request to the /calculator/api/v1/airlines endpoint
+		const response = await fetch('/calculator/api/v1/airlines');
 
 		// Parse the response as JSON
 		airlines = await response.json();
@@ -28,8 +28,10 @@
 	 * Gets the list of countries and assigns it to the countries variable
 	 */
 	const getCountries = async () => {
-		// Send a GET request to the /api/v1/airlines/get-countries endpoint
-		const response = await fetch(`/api/v1/airlines/get-countries?id=${selectedAirline?.id}`);
+		// Send a GET request to the /calculator/api/v1/airlines/get-countries endpoint
+		const response = await fetch(
+			`/calculator/api/v1/airlines/get-countries?id=${selectedAirline?.id}`,
+		);
 
 		// Parse the response as JSON and assign it to the countries variable
 		countries = await response.json();
@@ -99,8 +101,8 @@
 		// Check if actual weight is a number
 		if (!validateWeight(actualWeight, 'Please enter the actual weight')) return;
 
-		// Send a POST request to the /api/v1/airlines/calculate-overweight-fee endpoint
-		const response = await fetch('api/v1/airlines/calculate-overweight-fee', {
+		// Send a POST request to the /calculator/api/v1/airlines/calculate-overweight-fee endpoint
+		const response = await fetch('/calculator/api/v1/airlines/calculate-overweight-fee', {
 			method: 'POST',
 			body: JSON.stringify({
 				id: selectedAirline?.id,
